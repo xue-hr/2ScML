@@ -12,7 +12,7 @@
 #' @param maxit_tlc Maximum number of DC iteration.
 #' @param tol_tlc Convergence tolerance for TLC.
 #'
-#' @return
+#' @return beta, length p vector of estimated coefficients.
 #' @export
 #'
 #' @examples
