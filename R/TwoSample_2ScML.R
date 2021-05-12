@@ -1,3 +1,26 @@
+#' 2ScML with Two Sample
+#'
+#' Main function perform 2ScML with two sample, 
+#' using BIC for model selection in the second stage.
+#'
+#' @param Y Response vector of length n.
+#' @param Z IV matrix, n rows and p columns, p columns correspond to p IVs.
+#' @param stage1_ind Indices of relevant IVs in the first stage.
+#' @param gamma_hat Estimated gamma in the first stage.
+#' @param Theta0_hat Asymptotic covariance matrix of gamma_hat as in Assumption 5.
+#' @param sigma2_hat Estimated sigma2 square as in Assumption 5.
+#' @param n2 Sample size of the second sample used for estimating gamma.
+#' @param K2_vec Vector of candidate K2's for stage 2.
+#' @param tau2 Parameter tau in TLC for stage 2.
+#'
+#' @return A list contains following elements. 
+#' K2: BIC selected K2 in stage 2;
+#' stage2_ind: indices of IVs selected as invalid in stage 2;
+#' beta_est: estimate of causal effect of exposure to outcome;
+#' beta_se: standard error of beta_est.
+#' @export
+#'
+#' @examples
 TwoSample_2ScML <- function(Y,Z,stage1_ind,gamma_hat,
                             Theta0_hat,sigma2_hat,n2,
                             K2_vec,tau2 = 1e-5)

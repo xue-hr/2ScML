@@ -1,3 +1,20 @@
+#' Two Sample Estimate and Standard Error of Causal Effect
+#'
+#' @param Y Response vector of length n.
+#' @param Z IV matrix, n rows and p columns, p columns correspond to p IVs.
+#' @param stage1_ind Indices of IVs selected as relevant in stage 1.
+#' @param gamma_hat Estimated gamma in the first stage.
+#' @param Theta0_hat Asymptotic covariance matrix of gamma_hat as in Assumption 5.
+#' @param sigma2_hat Estimated sigma2 square as in Assumption 5.
+#' @param n2 Sample size of the second sample used for estimating gamma.
+#' @param stage2_ind Indices of IVs selected as invalid in stage 2.
+#'
+#' @return A vector of two elements, 
+#' the first one is estimated beta,
+#' the second one is its standard error.
+#' @export
+#'
+#' @examples
 TwoSampleEstSE <- function(Y,Z,stage1_ind,gamma_hat,
                            Theta0_hat,sigma2_hat,n2,
                            stage2_ind)
