@@ -1,4 +1,2 @@
 # 2ScML
-Codes and sample data for 2-stage constrained maximum likelihood method for instrumental variable regression.
-Current update: one sample case. 
-Two sample case and more examples are coming.
+R package for **Two-Stage Constrained Maximum Likelihood (2ScML)** method. As **2ScML** is not a valid R package name, we use the name **TScML** instead. Please find the package **TScML** here: <https://github.com/xue-hr/TScML>.
